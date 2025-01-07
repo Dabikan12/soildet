@@ -1,0 +1,36 @@
+.hero-section-wrapper {
+    background: #dde5b6;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-section-headline{
+    font-size: 56px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #354304;
+    letter-spacing: 7px;
+}
+
+.hero-section-description{
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #354304;
+    text-align: center;
+}
+
+@media (max-width: 781px) {
+    .hero-section-headline{
+        font-size: 36px;
+    }
+
+    .hero-section-description{
+        font-size: 24px;
+    }
+
+}
