@@ -2,6 +2,7 @@
     background: #dde5b6;
     width: 100%;
     height: 600px;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,5 +33,20 @@
     .hero-section-description{
         font-size: 24px;
     }
-
+}
+@media (max-width: 481px) {
+    .hero-section-headline{
+        font-size: 30px;
+    }
+    .hero-section-description{
+        font-size: 18px;
+    }
+}
+@media (max-width: 361px) {
+    .hero-section-headline{
+        font-size: 24px;
+    }
+    .hero-section-description{
+        font-size: 12px;
+    }
 }

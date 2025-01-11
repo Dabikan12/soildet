@@ -6,28 +6,30 @@ import "./ResearchForm.css"
 const ResearchForm = () => {
 
     const validationSchema = Yup.object({
-        name: Yup.string().required('Введите имя'),
-        secondName: Yup.string().required('Введите фамилию'),
-        email: Yup.string().email('Неверный E-mail').required('Введіть...'),
-        telegram: Yup.string().required('Введите Telegram'),
-        password: Yup.string().min(6, 'Пароль должен быть минимум 8 символов').required('Введите пароль'),
-        confirmPassword: Yup.string()
-            .oneOf([Yup.ref('password')], 'Пароли должны совпадать')
-            .required('Повторите пароль'),
-        referralCode: Yup.string().required('Введите реферальный код'),
+        nitrogen: Yup.string().required('Введіть вміст азоту'),
+        phosphorus: Yup.string().required('Введіть вміст фосфору'),
+        potassium: Yup.string().required('Введіть вміст калію'),
+        sulfur: Yup.string().required('Введіть вміст сірки'),
+        magnesium: Yup.string().required('Введіть вміст магнію'),
+        calcium: Yup.string().required('Введіть вміст кальцію'),
+        borax: Yup.string().required('Введіть вміст бору'),
+        zinc: Yup.string().required('Введіть вміст цинку'),
+        molybdenum: Yup.string().required('Введіть вміст молібдену'),
     });
 
     return (
         <div className="research-wrapper">
             <Formik
                 initialValues={{
-                    name: '',
-                    secondName: '',
-                    email: '',
-                    telegram: '',
-                    password: '',
-                    confirmPassword: '',
-                    referralCode: '',
+                    nitrogen: '',
+                    phosphorus: '',
+                    potassium: '',
+                    sulfur: '',
+                    magnesium: '',
+                    calcium: '',
+                    borax: '',
+                    zinc: '',
+                    molybdenum: '',
                 }}
                 validationSchema={validationSchema}
                 onSubmit={(values) => {
@@ -38,10 +40,43 @@ const ResearchForm = () => {
                     <div className="inputs-group">
                         <div className="inputGroup">
                             <Field
+                                name="nitrogen"
+                                type="email"
+                                className="input"
+                                placeholder="Азот"
+                            />
+                            <ErrorMessage name="nitrogen" component="div" className="error}"/>
+                        </div>
+                        <div className="inputs-group">
+                            <div className="inputGroup">
+                                <Field
+                                    name="phosphorus"
+                                    type=""
+                                    className="input"
+                                    placeholder="Фосфор"
+                                />
+                                <ErrorMessage name="phosphorus" component="div" className="error}"/>
+                            </div>
+                        </div>
+                        <div className="inputs-group">
+                            <div className="inputGroup">
+                                <Field
+                                    name="potassium"
+                                    type="email"
+                                    className="input"
+                                    placeholder="Калій"
+                                />
+                                <ErrorMessage name="potassium" component="div" className="error"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="inputs-group">
+                        <div className="inputGroup">
+                            <Field
                                 name="email"
                                 type="email"
                                 className="input"
-                                placeholder="E-mail"
+                                placeholder="Сірка"
                             />
                             <ErrorMessage name="email" component="div" className="error}"/>
                         </div>
@@ -51,7 +86,7 @@ const ResearchForm = () => {
                                     name="email"
                                     type="email"
                                     className="input"
-                                    placeholder="E-mail"
+                                    placeholder="Магній"
                                 />
                                 <ErrorMessage name="email" component="div" className="error}"/>
                             </div>
@@ -62,7 +97,7 @@ const ResearchForm = () => {
                                     name="email"
                                     type="email"
                                     className="input"
-                                    placeholder="E-mail"
+                                    placeholder="Кальцій"
                                 />
                                 <ErrorMessage name="email" component="div" className="error"/>
                             </div>
@@ -74,7 +109,7 @@ const ResearchForm = () => {
                                 name="email"
                                 type="email"
                                 className="input"
-                                placeholder="E-mail"
+                                placeholder="Бор"
                             />
                             <ErrorMessage name="email" component="div" className="error}"/>
                         </div>
@@ -84,7 +119,7 @@ const ResearchForm = () => {
                                     name="email"
                                     type="email"
                                     className="input"
-                                    placeholder="E-mail"
+                                    placeholder="Цинк"
                                 />
                                 <ErrorMessage name="email" component="div" className="error}"/>
                             </div>
@@ -95,40 +130,7 @@ const ResearchForm = () => {
                                     name="email"
                                     type="email"
                                     className="input"
-                                    placeholder="E-mail"
-                                />
-                                <ErrorMessage name="email" component="div" className="error"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="inputs-group">
-                        <div className="inputGroup">
-                            <Field
-                                name="email"
-                                type="email"
-                                className="input"
-                                placeholder="E-mail"
-                            />
-                            <ErrorMessage name="email" component="div" className="error}"/>
-                        </div>
-                        <div className="inputs-group">
-                            <div className="inputGroup">
-                                <Field
-                                    name="email"
-                                    type="email"
-                                    className="input"
-                                    placeholder="E-mail"
-                                />
-                                <ErrorMessage name="email" component="div" className="error}"/>
-                            </div>
-                        </div>
-                        <div className="inputs-group">
-                            <div className="inputGroup">
-                                <Field
-                                    name="email"
-                                    type="email"
-                                    className="input"
-                                    placeholder="E-mail"
+                                    placeholder="Молібден"
                                 />
                                 <ErrorMessage name="email" component="div" className="error"/>
                             </div>

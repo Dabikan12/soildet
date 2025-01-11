@@ -1,17 +1,37 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./Header.css";
 import {ReactComponent as Logo} from "../../assets/icons/logo.svg";
 import {Link} from "react-router-dom";
 
-const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const Header: React.FC = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
-    const toggleMenu = () => {
+    const toggleMenu = (): void => {
         setIsOpen(!isOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = (): void => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <header className={`header ${isOpen ? "open" : ""}`}>
+        <header
+            id="header"
+            className={`header ${isScrolled ? "scrolled" : ""} ${isOpen ? "open" : ""}`}
+        >
             <div className="header-content-container">
                 <button className="header__burger-btn" onClick={toggleMenu}>
                     <span></span><span></span><span></span>
