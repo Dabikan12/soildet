@@ -27,8 +27,8 @@
 }
 
 .input {
-    background: #dde5b642;
-    color: var(--primary-color);
+    background: #dde5b6;
+    color: #354304;
     border: none;
     font-size: 16px;
     max-width: 100%;
@@ -38,7 +38,7 @@
     border-radius: 5px;
 
     &:hover {
-        background-color: #dde5b6;;
+        background-color: #dae896;;
     }
 
     &:focus {

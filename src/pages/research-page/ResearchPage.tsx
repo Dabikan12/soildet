@@ -2,19 +2,17 @@ import React from 'react';
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import ResearchForm from "../../components/research-form/ResearchForm";
-import ResearchButton from "../../components/researchbutton/ResearchButton";
-import  "./ResultsPage.css";
+import  "./ResearchPage.css";
 
 
-const ResultsPage = () => {
+const ResearchPage = () => {
     return (
         <>
             <Header/>
-            <ResearchForm />
-            <ResearchButton/>
+            <ResearchForm/>
             <Footer/>
         </>
     );
 };
 
-export default ResultsPage;
+export default ResearchPage;

@@ -40,11 +40,8 @@ const Header: React.FC = () => {
                 <Logo className="header-logo"/>
 
                 <nav className="header-links">
-                    <Link to="/results" className="header-link">
+                    <Link to="/research" className="header-link">
                         <span className="link">Обробка результатів</span>
-                    </Link>
-                    <Link to="/contacts" className="header-link">
-                        <span className="link">Контакти</span>
                     </Link>
                     <Link to="/about" className="header-link">
                         <span className="link">Про нас</span>
@@ -54,9 +51,6 @@ const Header: React.FC = () => {
                 <nav className="header_nav">
                     <Link to="/results" onClick={toggleMenu}>
                         Обробка результатів
-                    </Link>
-                    <Link to="/contacts" onClick={toggleMenu}>
-                        Контакти
                     </Link>
                     <Link to="/about" onClick={toggleMenu}>
                         Про нас
